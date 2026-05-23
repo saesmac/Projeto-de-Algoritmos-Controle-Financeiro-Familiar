@@ -1,69 +1,114 @@
 # Controle Financeiro Familiar
 
-Sistema desenvolvido em Python com interface gráfica para controle de renda e divisão proporcional de gastos entre duas pessoas.
+Sistema desktop desenvolvido em Python com interface gráfica para auxiliar no gerenciamento financeiro familiar, permitindo controle de renda, divisão proporcional de despesas, histórico de gastos e visualização gráfica das contribuições financeiras.
 
 ---
 
-# Objetivo do Projeto
+# Sobre o Projeto
 
-O projeto foi criado com o objetivo de auxiliar no controle financeiro familiar, permitindo:
+O projeto foi desenvolvido para a disciplina de Algoritmos com o objetivo de aplicar conceitos fundamentais de programação através de uma solução prática e útil para o cotidiano.
 
-* Cadastro da renda de duas pessoas.
-* Cálculo automático da renda total.
-* Divisão proporcional de despesas.
-* Histórico de gastos.
-* Visualização gráfica da participação financeira.
+O sistema permite que duas pessoas registrem suas rendas e realizem o controle compartilhado das despesas da casa, dividindo automaticamente os gastos de forma proporcional à renda de cada uma.
+
+Além disso, o programa gera um gráfico de pizza para representar visualmente a participação financeira de cada pessoa.
+
+---
+
+# Objetivos
+
+- Aplicar conceitos de lógica de programação.
+- Trabalhar com estruturas de repetição e decisão.
+- Utilizar listas (vetores) para armazenamento de dados.
+- Desenvolver uma interface gráfica funcional.
+- Manipular dados financeiros de forma prática.
+- Gerar visualizações gráficas utilizando Python.
 
 ---
 
 # Funcionalidades
 
-## Cálculo de renda
+## Cadastro de renda
 
-O sistema soma automaticamente a renda das duas pessoas.
+O usuário informa:
+- renda da pessoa 1
+- renda da pessoa 2
+
+O sistema calcula automaticamente:
+- renda total da família
+- renda restante disponível
+
+---
 
 ## Divisão proporcional de gastos
 
-Os gastos são divididos proporcionalmente conforme a renda de cada pessoa.
+Cada gasto é dividido proporcionalmente conforme a renda de cada pessoa.
+
+### Exemplo:
+
+| Pessoa | Renda |
+|---|---|
+| Pessoa 1 | R$ 3000 |
+| Pessoa 2 | R$ 1000 |
+
+Se um gasto for de R$ 400:
+- Pessoa 1 paga R$ 300
+- Pessoa 2 paga R$ 100
+
+---
 
 ## Histórico de despesas
 
-Todos os gastos adicionados ficam armazenados em um histórico.
+Todos os gastos ficam registrados no sistema contendo:
+- descrição
+- valor total
+- valor pago por cada pessoa
+
+---
 
 ## Gráfico de pizza
 
-Exibe visualmente a proporção da renda de cada pessoa.
+O sistema gera automaticamente um gráfico representando:
+- porcentagem da renda da pessoa 1
+- porcentagem da renda da pessoa 2
+
+---
 
 ## Interface gráfica
 
-Interface simples e intuitiva desenvolvida com Tkinter.
+A aplicação possui interface desenvolvida com Tkinter, tornando o sistema mais intuitivo e interativo.
 
 ---
 
 # Tecnologias Utilizadas
 
-* Python
-* Tkinter
-* Matplotlib
+| Tecnologia | Função |
+|---|---|
+| Python | Linguagem principal |
+| Tkinter | Interface gráfica |
+| Matplotlib | Geração de gráficos |
 
 ---
 
 # Conceitos de Algoritmos Aplicados
 
-O projeto aplica os principais conceitos estudados na disciplina:
+Durante o desenvolvimento foram utilizados diversos conceitos estudados na disciplina:
 
-* Entrada e saída de dados
-* Estruturas de decisão
-* Estruturas de repetição
-* Vetores
-* Interface gráfica
+- Variáveis
+- Entrada e saída de dados
+- Estruturas condicionais
+- Estruturas de repetição
+- Funções
+- Vetores/Listas
+- Manipulação de dados
+- Interface gráfica
+- Organização modular do código
 
 ---
 
 # Estrutura do Projeto
 
 ```text
-Projeto/
+Projeto-de-Algoritmos-Controle-Financeiro-Familiar/
 │
 ├── interface2.py
 └── README.md
@@ -71,9 +116,19 @@ Projeto/
 
 ---
 
-# Como Executar
+# Como Executar o Projeto
 
-## 1. Instalar dependências
+## 1️: Instalar o Python
+
+Baixe e instale o Python:
+
+https://www.python.org/downloads/
+
+---
+
+## 2️: Instalar as dependências
+
+Abra o terminal na pasta do projeto e execute:
 
 ```bash
 pip install matplotlib
@@ -81,7 +136,9 @@ pip install matplotlib
 
 ---
 
-## 2. Executar o programa
+## 3: Executar o sistema
+
+No terminal, execute:
 
 ```bash
 python interface2.py
@@ -89,35 +146,90 @@ python interface2.py
 
 ---
 
-# Demonstração do Sistema
+# Funcionamento do Sistema
 
-1. Inserir a renda da pessoa 1.
-2. Inserir a renda da pessoa 2.
-3. Clicar em “Calcular”.
-4. Adicionar gastos e descrições.
-5. Visualizar o histórico e o gráfico.
+## Etapa 1 — Cadastro das rendas
+
+O usuário informa:
+- renda da pessoa 1
+- renda da pessoa 2
+
+O sistema calcula automaticamente a renda bruta total.
 
 ---
 
-# Integrantes do Grupo
+## Etapa 2 — Adição de gastos
 
-* Daniel Koyama
-* Eduardo Saes
-* Lucas Martins
-* Nicoly Oliveira
-* Yasmin Miranda
+O usuário informa:
+- valor do gasto
+- descrição
+
+O sistema:
+- subtrai o valor da renda restante
+- divide proporcionalmente entre as pessoas
+- salva no histórico
+
+---
+
+## Etapa 3 — Visualização do histórico
+
+O histórico exibe:
+- nome do gasto
+- valor total
+- quanto cada pessoa deve pagar
+
+---
+
+## Etapa 4 — Gráfico financeiro
+
+O gráfico de pizza mostra visualmente a proporção das rendas.
+
+---
+
+# Exemplo de Uso
+
+### Entrada:
+
+- Pessoa 1: R$ 3000
+- Pessoa 2: R$ 2000
+- Gasto: Mercado — R$ 500
+
+### Resultado:
+
+- Pessoa 1 paga: R$ 300
+- Pessoa 2 paga: R$ 200
 
 ---
 
 # Melhorias Futuras
 
-* Salvamento em banco de dados.
-* Exportação de relatórios.
-* Sistema de login.
-* Ler extratos
+- Salvamento em banco de dados
+- Exportação de relatórios em PDF
+- Sistema de login
+- Integração com APIs bancárias
+- Controle mensal de despesas
+- Gráficos avançados
+- Categorias de gastos
+- Modo escuro
+
+---
+
+# Integrantes do Grupo
+
+- Daniel Koyama
+- Eduardo Saes
+- Lucas Martins
+- Nicoly Oliveira
+- Yasmin Miranda
 
 ---
 
 # Licença
 
-Projeto desenvolvido para fins acadêmicos na disciplina de Algoritmos.
+Projeto desenvolvido exclusivamente para fins acadêmicos na disciplina de Algoritmos.
+
+---
+
+# Considerações Finais
+
+O projeto permitiu aplicar na prática conceitos importantes de programação e desenvolvimento de interfaces gráficas, além de demonstrar como algoritmos podem ser utilizados para resolver problemas reais do cotidiano financeiro.
